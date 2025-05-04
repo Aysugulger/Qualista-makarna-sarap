@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Qualista Kafenin Web Sitesi</title>
+    <meta name="description" content="Qualista kafenin web sitesi">
+    <meta name="keywords" content="Qualista, makarna, taze, lezzetli">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #sayfa {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Banner */
+        #banner {
+            width: 100%;
+            height: 80px;
+            background-color: rgb(97, 10, 10);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        #gezinme {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buton {
+            background-color: white;
+            color: rgb(97, 10, 10);
+            border: 2px solid rgb(97, 10, 10);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buton:hover {
+            background-color: rgb(97, 10, 10);
+            color: white;
+        }
+
+        /* Ana Menü */
+        #anamenu {
+            width: 100%;
+            background-color: rgb(248, 244, 244);
+            padding: 10px 0;
+            border-top: 1px dotted #ccc;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        #anamenu ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #anamenu ul li {
+            background-color: rgb(109, 3, 3);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+
+        #anamenu ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        #anamenu ul a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /* İçerik ve Yan Menü */
+        .icerik-alani {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        #icerik {
+            flex: 2;
+            background-color: rgb(97, 10, 10);
+            padding: 10px;
+        }
+
+        #icerik img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #yanmenu {
+            flex: 1;
+            background-color: rgb(241, 234, 234);
+            padding: 20px;
+        }
+
+        .metin {
+            font-size: 14px;
+            color: brown;
+            line-height: 1.6;
+        }
+
+        /* Alt Menü */
+        #altmenu {
+            width: 100%;
+            background-color: rgb(109, 3, 3);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+        }
+
+        /* Responsive Tasarım */
+        @media screen and (max-width: 768px) {
+            .icerik-alani {
+                flex-direction: column;
+            }
+
+            #icerik, #yanmenu {
+                width: 100%;
+            }
+
+            #anamenu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #anamenu ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            #gezinme {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .buton {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sayfa">
+        <header id="banner">
+            <div id="gezinme">
+                <button class="buton" onclick="window.location.href='rezervasyon.html'">Rezervasyon Yap</button>
+                <button class="buton" onclick="window.location.href='siparis.html'">Sipariş Ver</button>
+            </div>
+        </header>
+
+        <nav id="anamenu">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="menüü.html">Menü</a></li>
+                <li><a href="galerii.html">Galeri</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                
+            </ul>
+        </nav>
+
+        <div class="icerik-alani">
+            <article id="icerik">
+                <img src="resimler/bahçe.jpg" alt="Qualista bahçe manzarası" title="mekan fotoğrafı">
+            </article>
+
+            <aside id="yanmenu">
+                <p class="metin">
+                    Makarnacı Kafem, taze ve kaliteli yöntemlerle hazırlanmış, farklı damak zevklerine hitap
+                    eden makarnalarla sizi bekliyor. İtalyan mutfağının vazgeçilmez lezzetlerinden klasik makarnalardan,
+                    özel soslarla harmanlanmış özgün tariflerimize kadar geniş bir seçenek yelpazesi sunuyoruz.
+                    Her bir tabakta sadece bir yemek değil, bir deneyim bulacaksınız.
+                </p>
+            </aside>
+        </div>
+
+        <footer id="altmenu">
+            © 2025 Qualista Kafe | Tüm Hakları Saklıdır
+        </footer>
+    </div>
+</body>
+</html>

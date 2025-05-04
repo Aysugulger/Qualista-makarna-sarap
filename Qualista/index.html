@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Qualista Kafenin Web Sitesi</title>
+    <meta name="description" content="Qualista kafenin web sitesi">
+    <meta name="keywords" content="Qualista, makarna, taze, lezzetli">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('resimler/arkaplan.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Üst Menü Alanı */
+        header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(97, 10, 10);
+        }
+
+        /* İçerik Alanı */
+        #icerik {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: calc(100vh - 100px);
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+
+        .metin-kutusu {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .metin-kutusu p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Video */
+        video {
+            margin-top: 20px;
+            width: 100%; /* Videonun genişliğini metnin kutusuna uyumlu yap */
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(97, 10, 10);
+            text-align: center;
+            padding: 15px 0;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: auto; /* Sayfanın en altına ittirir */
+        }
+
+        footer img {
+            height: 20px;
+            margin-right: 10px; /* Logo ile yazı arasına boşluk */
+        }
+
+        footer .footer-text {
+            font-size: 14px;
+        }
+
+        /* Mobil Uyumluluk */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                padding-top: 10px;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+
+            #icerik {
+                padding: 20px;
+                justify-content: flex-start;
+            }
+
+            .metin-kutusu {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Qualista Makarna & Şarap</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="menüü.html">Menü</a></li>
+                <li><a href="galerii.html">Galeri</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="icerik">
+        <div class="metin-kutusu">
+            <h2>Qualista'nın büyülü atmosferinde unutulmaz bir deneyime hazır mısın?</h2>
+            <p>
+                Makarna evimizde, taze ve kaliteli yöntemlerle hazırlanmış, farklı damak zevklerine hitap eden makarnalarla sizi bekliyoruz.
+                İtalyan mutfağının vazgeçilmez lezzetlerinden klasik makarnalardan, özel soslarla harmanlanmış özgün tariflerimize kadar geniş bir seçenek yelpazesi sunuyoruz.
+                Her bir tabakta sadece bir yemek değil, bir deneyim bulacaksınız.
+            </p>
+
+            <!-- Video Ekleme -->
+            <video controls>
+                <source src="video/3197862-hd_1920_1080_25fps.mp4" type="video/mp4">
+
+                
+            </video>
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="footer-text">
+            <h2>iletişim</h2>
+            <br>
+            Telefon:0530 644 23 05
+            <br>
+            <br>
+            Email:gulgeraysu@gmail.com
+            <br>
+            <br>
+            © 2025 Qualista Makarna & Şarap | Tüm Hakları Saklıdır
+        </div>
+    </footer>
+
+</body>
+</html>

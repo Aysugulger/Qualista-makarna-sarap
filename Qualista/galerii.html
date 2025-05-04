@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Qualista Galeri</title>
+    <meta name="description" content="Qualista kafenin galeri sayfası">
+    <meta name="keywords" content="Qualista, galeri, mekan, yemek, fotoğraf">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f7f3f3;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+      background-color: #5a0a0a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+
+        /* Sayfa İçeriği */
+        #sayfa {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .galeri-baslik {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: rgb(97, 10, 10);
+        }
+
+        .galeri-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            animation: fadeIn 1.2s ease-in;
+        }
+
+        .foto-kutusu {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .foto-kutusu img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .foto-kutusu:hover img {
+            transform: scale(1.1);
+        }
+
+        .foto-kutusu:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(97, 10, 10);
+            text-align: center;
+            padding: 25px 10px;
+            color: white;
+            width: 100%;
+        }
+
+        footer .footer-text {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding-top: 10px;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Qualista Makarna & Şarap</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="menüü.html">Menü</a></li>
+                <li><a href="galerii.html">Galeri</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="sayfa">
+        <h2 class="galeri-baslik">Kafemizden Kareler</h2>
+
+        <div class="galeri-container">
+            <div class="foto-kutusu"><img src="resimler/masa.jpg" alt="Mekan fotoğrafı"></div>
+            <div class="foto-kutusu"><img src="resimler/çalışan.jpg" alt="Çalışan fotoğrafı"></div>
+            <div class="foto-kutusu"><img src="resimler/özel.jpg" alt="Özel tabağımız"></div>
+            <div class="foto-kutusu"><img src="resimler/hamur.jpg" alt="Hamur hazırlanışı"></div>
+            <div class="foto-kutusu"><img src="resimler/dıııışmekan.jpg" alt="Mekan dışı"></div>
+            <div class="foto-kutusu"><img src="resimler/makarna2.jpg" alt="Makarna sunumu"></div>
+            <div class="foto-kutusu"><img src="resimler/şarap.jpg" alt="Şarap servisi"></div>
+            <div class="foto-kutusu"><img src="resimler/mekaann.jpg" alt="Mekan"></div>
+            <div class="foto-kutusu"><img src="resimler/şarapmakarna.jpg" alt="Makarna ve şarap"></div>
+            <div class="foto-kutusu"><img src="resimler/bahçeeee.jpg" alt="Bahçe"></div>
+            <div class="foto-kutusu"><img src="resimler/şarapson.jpg" alt="Şarap"></div>
+            <div class="foto-kutusu"><img src="resimler/makarnason.jpg" alt="Makarna"></div>
+        </div>
+    </div>
+    <audio src="ses/Bitter Milk.mp3" controls muted loop> 
+
+    </audio>
+
+    <footer>
+        <div class="footer-text">
+            <h2>İletişim</h2>
+            Telefon: 0530 644 23 05<br>
+            Email: gulgeraysu@gmail.com<br><br>
+            © 2025 Qualista Makarna & Şarap | Tüm Hakları Saklıdır
+        </div>
+    </footer>
+
+</body>
+</html>
+
